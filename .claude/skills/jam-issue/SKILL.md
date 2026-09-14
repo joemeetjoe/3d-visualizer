@@ -5,7 +5,7 @@ description: Pick up and complete a board issue end to end (e.g. "/jam-issue B2a
 
 # Work an issue
 
-Argument: an issue ID like `A2a`, `C4b`, `D3c` (case-insensitive). If none is given, list `todo` issues for the user's track from `docs/BOARD.md` and ask which one.
+Argument: an issue ID like `A2a`, `C4b`, `D3c` (case-insensitive). If none is given, run `bash .claude/skills/jam-issue/scripts/board-next.sh <TRACK>` (A/B/C/D) to list `todo` issues and whether their blockers are done, and ask which one.
 
 ## Procedure
 
@@ -18,7 +18,7 @@ Argument: an issue ID like `A2a`, `C4b`, `D3c` (case-insensitive). If none is gi
 3. **Plan in ≤ 8 bullets**: files to create/modify, the store/route/component shapes, and how each acceptance criterion will be verified. Show the plan; proceed unless the user objects (they're in a hurry — don't wait for a ceremonial "ok" if the plan is obvious).
 4. **Implement** in small, runnable steps, following the `jam-conventions` skill. Prefer the code sketches in the guides — they encode the gotchas (local-space pins, iOS video attributes, atomic writes, allowedHosts…).
 5. **Verify** each acceptance criterion explicitly: run the command, hit the endpoint with curl, describe the manual check the user must do on a phone. Report each as ✅ / ⬜ (needs manual check) / ❌ with what's missing. Never claim a phone-only or GPU-only check passed.
-6. **Update `docs/BOARD.md`**: set the issue's Status to `doing` when starting and `done` when all criteria pass (or leave `doing` and list what's left). If you made a demo-first trade-off, append it to `docs/issues/P0-post-jam-backlog.md`.
+6. **Update `docs/BOARD.md`** with the script, never by hand-editing the table: `bash .claude/skills/jam-issue/scripts/board-status.sh <ID> doing` when starting, `… done` when all criteria pass (or leave `doing` and list what's left). If you made a demo-first trade-off, append it to `docs/issues/P0-post-jam-backlog.md`.
 7. **Hand back**: a 3-line summary, the commit message (`type(scope): subject`), and the one thing to show a teammate (the "demoable" moment).
 
 ## Guardrails

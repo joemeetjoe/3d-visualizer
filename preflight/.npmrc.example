@@ -1,0 +1,9 @@
+# Copy to ~/.npmrc (or the repo root .npmrc) and set your Nexus npm proxy/group URL.
+registry=https://nexus.yourcompany.com/repository/npm-all/
+# If Nexus requires auth:
+# //nexus.yourcompany.com/repository/npm-all/:_authToken=${NEXUS_NPM_TOKEN}
+# Corporate TLS interception:
+# cafile=/path/to/corporate-root-ca.pem
+# Speeds up installs and avoids surprise prompts:
+strict-peer-dependencies=false
+auto-install-peers=true

@@ -4,6 +4,8 @@ Do this before the kickoff if you can. Versions verified against npm/Docker Hub 
 
 ## Everyone (laptop)
 
+> **Nexus users:** run the warm-up in `preflight/README.md` before the jam, and copy `preflight/.npmrc.example` to `~/.npmrc` with your registry URL. `preflight/pnpm-lock.yaml` proves the pinned set below installs with zero peer warnings.
+
 | Tool | Version | Install (macOS) | Check |
 |---|---|---|---|
 | Node | **22.22+** (React Router 8 minimum; 24 fine) | `brew install node@22` or nvm | `node -v` |
@@ -60,7 +62,7 @@ Why the pins matter:
 
 ## Track A additionally
 
-- Download the Khronos **ToyCar** sample (`Models/ToyCar/glTF-Binary/ToyCar.glb` from github.com/KhronosGroup/glTF-Sample-Assets, ~6 MB) into `apps/api/samples/toycar.glb` and `apps/web/public/models/toycar.glb`. It is CC-BY-4.0, has PBR materials, and is a *car* — good enough for every viewer issue until D5a lands the real one.
+- The Khronos **ToyCar** sample is already in the repo at `assets/samples/toycar.glb` (5.4 MB, CC BY 4.0, PBR materials, and it's a *car*). C0a copies it to `apps/api/samples/toycar.glb` and `apps/web/public/models/toycar.glb`. Good enough for every viewer issue until D5a lands the real one.
 - Install the React DevTools; the R3F scene shows up as components.
 
 ## Track D additionally — the GPU box

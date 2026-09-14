@@ -13,6 +13,7 @@ Everything a 4-person team needs to build and present the **3D Vehicle Damage Vi
 4. [`docs/BOARD.md`](docs/BOARD.md) — the issue board. Find your track, pick the next unblocked issue.
 5. [`docs/SETUP.md`](docs/SETUP.md) — hour-0 machine setup (versions, tools, tunnel, GPU box).
 6. [`docs/LEARNING_PATHS.md`](docs/LEARNING_PATHS.md) — per-track reading order for the guides, with 20-minute exercises.
+7. [`docs/PREFLIGHT.md`](docs/PREFLIGHT.md) — **before the jam**: Nexus warm-up, Docker Hub, cloudflared on the corporate network, AWS G-instance quota, phones, the car.
 
 ## Tracks
 
@@ -30,7 +31,10 @@ Write your name in the Owner column of [`docs/BOARD.md`](docs/BOARD.md) when you
 ```
 prd.md                      The PRD (unchanged)
 CLAUDE.md                   Project conventions loaded by everyone's Claude Code
+preflight/                  Resolved dependency tree (pnpm-lock + PACKAGES.txt) for Nexus warm-up
+assets/samples/             ToyCar sample glb (CC BY 4.0) so the viewer works at minute one
 docs/
+  PREFLIGHT.md              Pre-jam checklist (network, AWS quota, phones, car)
   DECISIONS.md              Scope decisions from the planning session
   PLAN.md                   24h timeline, tracks, checkpoints
   CONTRACTS.md              Types, endpoints, state machine, worker API, file layout
